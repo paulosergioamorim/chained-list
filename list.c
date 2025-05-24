@@ -51,7 +51,7 @@ void Append(List *list, Produto *value)
 {
     Cell *cell = CreateCell(value);
 
-    if (!list->last)
+    if (IsEmpty(list))
     {
         list->first = list->last = cell;
         return;
@@ -65,7 +65,7 @@ void Prepend(List *list, Produto *value)
 {
     Cell *cell = CreateCell(value);
 
-    if (!list->first)
+    if (IsEmpty(list))
     {
         list->first = list->last = cell;
         return;
